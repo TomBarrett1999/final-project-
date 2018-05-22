@@ -37,9 +37,36 @@ public class MaIn
 		Ball b = new Ball(500,900,10,"RED");
 		g.addBall(b);
 		g.update();
-	
-	
 /*allowing for the ball and the bricks
 *to appear on the screen*/
 
-		
+	
+		double x,y;
+		double xSpeed=0;
+		double ySpeed=3;
+		while(true)
+		{
+
+			x = b.getXPosition();
+			b.setXPosition(x+xSpeed);
+			if(x+xSpeed>1000)
+				xSpeed=-xSpeed;
+			if(x+xSpeed<0)
+				xSpeed=-xSpeed;
+
+			y = b.getYPosition();
+			b.setYPosition(y+ySpeed);
+			if(y+ySpeed>1000)
+					ySpeed=-ySpeed;
+			if(y+ySpeed<0)
+				ySpeed=-ySpeed;
+			g.update();
+			
+		}
+	}
+
+}
+/*
+*allowing the ball to have control move around 
+*on the game/window and bouncing correctly 
+*of the walls*/
