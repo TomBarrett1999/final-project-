@@ -42,11 +42,55 @@ public class Brick
 			
 		}
 	}
-}
+
 
 /*
 *code that allows the ball to move in the x or y
 *diection that i pick 
 *also allows the balls to bounce of the walls
 */
-
+	public class game
+	{ 
+		private double x; 
+		private double y;
+		private double w;
+		private double h; 
+		  
+		private Rectangle shape[] = new Rectangle[4];
+		  
+		public game(double XPos, double YPos, String colour)
+		{
+		x=XPos; 
+		y=YPos;
+		shape[0] = new Rectangle((x-0), (y+0), 0, 0, colour); 
+		shape[1] = new Rectangle((x+0), (y+0), 0, 0, colour); 
+		shape[2] = new Rectangle(x, y, 150, 100, colour); 
+		shape[3] = new Rectangle(x, (y-0), 0, 0, colour);
+		} 
+	
+		public void addTo(GameArena g)     
+		{
+			a.addRectangle(shape[0]);
+			a.addRectangle(shape[1]); 
+			a.addRectangle(shape[2]); 
+			a.addRectangle(shape[3]);   
+			a.update();
+		}
+  	
+		public double getx() 
+		{
+			return x;
+		} 
+  	
+		public double gety() 
+		{
+			return y;
+		}
+ 	}
+}
+/*
+*allows to create a brick using an array
+*this will enable for the users of the 
+*code to add bricks later on in the code in a
+*seprate Object orientated file allowing 
+*for the brick to show*/
