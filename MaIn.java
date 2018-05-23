@@ -68,6 +68,13 @@ public class MaIn
 		g.update();
 
 		Brick a = new Brick();
+/* calling the Rectangle class
+*from the GameArena. i am able 
+*to use this within my Brick
+*breaker game to show the 
+*rectangles so that the 
+*player can get an understanding 
+*of the game i have made*/
 		
 		Ball b = new Ball(500,900,10,"RED");
 		Ball c = new Ball(500,920,10,"RED");
@@ -77,8 +84,7 @@ public class MaIn
 		g.addBall(d);
 		
 		g.update();
-/*allowing for the ball and the bricks
-*to appear on the screen*/
+
 
 	
 		double x1,y1,x2,y2,x3,y3;
