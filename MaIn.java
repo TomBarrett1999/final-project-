@@ -55,6 +55,10 @@ public class MaIn
     		g.addRectangle(Z);
 		g.update();
 
+		Rectangle P = new Rectangle(100,200,50,50,"GREEN");
+    		g.addRectangle(P);
+		g.update();
+
 		Brick a = new Brick();
 		
 		Ball b = new Ball(500,900,10,"RED");
