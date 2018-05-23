@@ -155,7 +155,8 @@ public class MaIn
 
 }
 /*
-*the while loop is allowing the ball to 
+*the while loop with the if statements 
+*within it, is allowing the ball to 
 *have control move around on the 
 *game/window and bouncing correctly 
 *of the walls of the game arean*/
