@@ -23,7 +23,8 @@ public class MaIn
 *and runs all the code within the file
 *of game arean 
 *allowing for game to be seen 
-*within the window*/
+*within the window
+*/
  
     		
 
@@ -69,12 +70,13 @@ public class MaIn
 
 		Brick a = new Brick();
 /* calling the Rectangle class
-*from the GameArena. i am able 
+*from the GameArena. I am able 
 *to use this within my Brick
-*breaker game to show the 
-*rectangles so that the 
-*player can get an understanding 
-*of the game i have made*/
+*breaker game to show and make the 
+*rectangles so that the player
+*can get a better understanding 
+*of the game i have made
+*/
 		
 		Ball b = new Ball(500,900,10,"RED");
 		Ball c = new Ball(500,920,10,"RED");
@@ -88,7 +90,7 @@ public class MaIn
 
 	
 		double x1,y1,x2,y2,x3,y3;
-		double xSpeed=-3;
+		double xSpeed=6;
 		double ySpeed=6;
 		while(true)
 		{
@@ -106,7 +108,10 @@ public class MaIn
 				ySpeed=-ySpeed;
 			else if(y1+ySpeed<0)
 				ySpeed=-ySpeed;
-
+/* 
+*adding the first moving 
+*ball to my game
+*/ 
 
 			//if( (x1+xSpeed>500 && x1+xSpeed<100) && y1+ySpeed == 950){
 				//xSpeed = -xSpeed;
@@ -127,8 +132,10 @@ public class MaIn
 			else if(y2+ySpeed<0)
 				ySpeed=-ySpeed;
 
-/*adding a second ball to the 
-*brick breaker game*/
+/*
+*adding a second ball to the 
+*brick breaker game
+*/
 			//if( (x2+xSpeed>500 && x2+xSpeed<100) && y2+ySpeed == 950)
 			
 				//xSpeed = -xSpeed;
@@ -147,8 +154,10 @@ public class MaIn
 				ySpeed=-ySpeed;
 			else if(y3+ySpeed<0)
 				ySpeed=-ySpeed;
-/*adding a third ball to the 
-*brick breaker game*/
+/*
+*adding a third ball to the 
+*brick breaker game
+*/
 			//if( (x3+xSpeed>500 && x3+xSpeed<100) && y3+ySpeed == 950)
 			
 				//xSpeed = -xSpeed;
@@ -163,4 +172,5 @@ public class MaIn
 *within it, is allowing the ball to 
 *have control move around on the 
 *game/window and bouncing correctly 
-*of the walls of the game arean*/
+*of the walls of the game arean
+*/
