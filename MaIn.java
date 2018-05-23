@@ -71,17 +71,19 @@ public class MaIn
 		
 		Ball b = new Ball(500,900,10,"RED");
 		Ball c = new Ball(500,920,10,"RED");
+		Ball d = new Ball(500,940,10,"RED");
 		g.addBall(b);
 		g.addBall(c);
+		g.addBall(d);
 		
 		g.update();
 /*allowing for the ball and the bricks
 *to appear on the screen*/
 
 	
-		double x1,y1,x2,y2;
+		double x1,y1,x2,y2,x3,y3;
 		double xSpeed=-3;
-		double ySpeed=-6;
+		double ySpeed=6;
 		while(true)
 		{
 
@@ -100,7 +102,7 @@ public class MaIn
 				ySpeed=-ySpeed;
 
 
-			//if( (x1+xSpeed>25 && x1+xSpeed<150) && y1+ySpeed == 950){
+			//if( (x1+xSpeed>500 && x1+xSpeed<100) && y1+ySpeed == 950){
 				//xSpeed = -xSpeed;
 				//ySpeed = -ySpeed;
 		
@@ -120,12 +122,24 @@ public class MaIn
 				ySpeed=-ySpeed;
 
 
-			//if( (x2+xSpeed>25 && x2+xSpeed<150) && y2+ySpeed == 950)
+			//if( (x2+xSpeed>500 && x2+xSpeed<100) && y2+ySpeed == 950)
 			
 				//xSpeed = -xSpeed;
 				//ySpeed = -ySpeed;
 			
-			
+			x3 = d.getXPosition();
+			d.setXPosition(x3+xSpeed);
+			if(x3+xSpeed>1000)
+				xSpeed=-xSpeed;
+			else if(x3+xSpeed<0)
+				xSpeed=-xSpeed;
+
+			y3 = d.getYPosition();
+			d.setYPosition(y3+ySpeed);
+			if(y3+ySpeed>1000)
+				ySpeed=-ySpeed;
+			else if(y3+ySpeed<0)
+				ySpeed=-ySpeed;
 
 			g.update();
 		}
