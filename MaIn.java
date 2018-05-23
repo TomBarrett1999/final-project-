@@ -1,11 +1,17 @@
 /*
-* This is basic code for a brick
+* <h1> Brick Breaker </h1>
+*<p>
+*This is basic code for a brick
 *breaker game. At the moment all 
 *the game does is show brick,
 *a moving ball and the ball 
 *bouncing off the sides of the 
 *game arena. this .java file is 
-*where you would run the code.*/
+*where you would run the code.
+*
+*@author Tom Barrett
+*@Version 2.0
+*/
 
 public class MaIn
 {
@@ -15,62 +21,101 @@ public class MaIn
 /*
 *class that calls coursework 
 *and runs all the code within the file
+*of game arean 
 *allowing for game to be seen 
 *within the window*/
  
-    
-    		game i = new game(500,100, "RED");
-    		i.addTo(g);
+    		
+
+    		Rectangle i = new Rectangle(500,100,50,50,"GREEN");
+    		g.addRectangle(i);
 		g.update();
 		
-		game k = new game(300,100, "RED");
-    		k.addTo(g);
+		Rectangle k = new Rectangle(300,100,50,50,"GREEN");
+    		g.addRectangle(k);
 		g.update();
 
-		game q = new game(100,100, "RED");
-    		q.addTo(g);
+		Rectangle q = new Rectangle(100,100,50,50,"GREEN");
+    		g.addRectangle(q);
 		g.update();
 		
-		game l = new game(700,100, "RED");
-    		l.addTo(g);
+		Rectangle l = new Rectangle(700,100,50,50,"GREEN");
+    		g.addRectangle(l);
 		g.update();
 
-		game t = new game(900,100, "RED");
-    		t.addTo(g);
+		Rectangle t = new Rectangle(900,100,50,50,"GREEN");
+    		g.addRectangle(t);
 		g.update();
 
-
+		Rectangle O = new Rectangle(500,200,50,50,"GREEN");
+    		g.addRectangle(O);
+		g.update();
+		
+		Rectangle Z = new Rectangle(300,200,50,50,"GREEN");
+    		g.addRectangle(Z);
+		g.update();
 
 		Brick a = new Brick();
 		
 		Ball b = new Ball(500,900,10,"RED");
+		Ball c = new Ball(500,920,10,"RED");
 		g.addBall(b);
+		g.addBall(c);
+		
 		g.update();
 /*allowing for the ball and the bricks
 *to appear on the screen*/
 
 	
-		double x,y;
-		double xSpeed=3;
-		double ySpeed=3;
+		double x1,y1,x2,y2;
+		double xSpeed=-3;
+		double ySpeed=-6;
 		while(true)
 		{
 
-			x = b.getXPosition();
-			b.setXPosition(x+xSpeed);
-			if(x+xSpeed>1000)
+			x1 = b.getXPosition();
+			b.setXPosition(x1+xSpeed);
+			if(x1+xSpeed>1000)
 				xSpeed=-xSpeed;
-			if(x+xSpeed<0)
+			else if(x1+xSpeed<0)
 				xSpeed=-xSpeed;
 
-			y = b.getYPosition();
-			b.setYPosition(y+ySpeed);
-			if(y+ySpeed>1000)
-					ySpeed=-ySpeed;
-			if(y+ySpeed<0)
+			y1 = b.getYPosition();
+			b.setYPosition(y1+ySpeed);
+			if(y1+ySpeed>1000)
 				ySpeed=-ySpeed;
-			g.update();
+			else if(y1+ySpeed<0)
+				ySpeed=-ySpeed;
+
+
+			//if( (x1+xSpeed>25 && x1+xSpeed<150) && y1+ySpeed == 950){
+				//xSpeed = -xSpeed;
+				//ySpeed = -ySpeed;
+		
+
+			x2 = c.getXPosition();
+			c.setXPosition(x2+xSpeed);
+			if(x2+xSpeed>1000)
+				xSpeed=-xSpeed;
+			else if(x2+xSpeed<0)
+				xSpeed=-xSpeed;
+
+			y2 = c.getYPosition();
+			c.setYPosition(y2+ySpeed);
+			if(y2+ySpeed>1000)
+				ySpeed=-ySpeed;
+			else if(y2+ySpeed<0)
+				ySpeed=-ySpeed;
+
+
+			//if( (x2+xSpeed>25 && x2+xSpeed<150) && y2+ySpeed == 950)
 			
+				//xSpeed = -xSpeed;
+				//ySpeed = -ySpeed;
+			
+			
+
+			g.update();
 		}
 	}
 
