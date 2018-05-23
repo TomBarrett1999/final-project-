@@ -51,7 +51,7 @@ public class MaIn
 
 	
 		double x,y;
-		double xSpeed=0;
+		double xSpeed=3;
 		double ySpeed=3;
 		while(true)
 		{
@@ -76,6 +76,7 @@ public class MaIn
 
 }
 /*
-*allowing the ball to have control move around 
-*on the game/window and bouncing correctly 
-*of the walls*/
+*the while loop is allowing the ball to 
+*have control move around on the 
+*game/window and bouncing correctly 
+*of the walls of the game arean*/
