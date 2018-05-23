@@ -1,3 +1,12 @@
+/*
+* This is basic code for a brick
+*breaker game. At the moment all 
+*the game does is show brick,
+*a moving ball and the ball 
+*bouncing off the sides of the 
+*game arena. this .java file is 
+*where you would run the code.*/
+
 public class MaIn
 {
 	public static void main(String[] args)
