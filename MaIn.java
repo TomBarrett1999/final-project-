@@ -149,6 +149,10 @@ public class MaIn
 				ySpeed=-ySpeed;
 /*adding a third ball to the 
 *brick breaker game*/
+			//if( (x3+xSpeed>500 && x3+xSpeed<100) && y3+ySpeed == 950)
+			
+				//xSpeed = -xSpeed;
+				//ySpeed = -ySpeed;
 			g.update();
 		}
 	}
