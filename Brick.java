@@ -1,3 +1,11 @@
+/*
+* This is basic code for a brick
+*breaker game. At the moment all 
+*the game does is show brick,
+*a moving ball and the ball 
+*bouncing off the sides of the 
+*game arena.*/
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
@@ -70,11 +78,11 @@ public class Brick
 	
 		public void addTo(GameArena g)     
 		{
-			a.addRectangle(shape[0]);
-			a.addRectangle(shape[1]); 
-			a.addRectangle(shape[2]); 
-			a.addRectangle(shape[3]);   
-			a.update();
+			g.addRectangle(shape[0]);
+			g.addRectangle(shape[1]); 
+			g.addRectangle(shape[2]); 
+			g.addRectangle(shape[3]);   
+			g.update();
 		}
   	
 		public double getx() 
